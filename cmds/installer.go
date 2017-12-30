@@ -82,7 +82,7 @@ func NewCmdInstaller() *cobra.Command {
 			var buf bytes.Buffer
 			var data []byte
 
-			if opts.namespace != "kube-system" && opts.namespace != core.NamespaceDefault {
+			if opts.namespace != metav1.NamespaceSystem && opts.namespace != core.NamespaceDefault {
 				data, err = meta.MarshalToYAML(newNamespace(opts.namespace), core.SchemeGroupVersion)
 				if err != nil {
 					log.Fatalln(err)
