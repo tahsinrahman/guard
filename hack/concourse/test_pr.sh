@@ -8,5 +8,4 @@ cp -r pull-request $GOPATH/src/github.com/appscode/guard
 cd $GOPATH/src/github.com/appscode/guard
 echo "testing commit"
 git rev-parse HEAD
-go build ./...
-go test -v ./...
+echo "test2"
